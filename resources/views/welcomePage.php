@@ -19,7 +19,7 @@
         First, does it work? Does the dish make us smile inside and out? Do we want to eat the whole batch by ourselves?<br>
         Second, if the dish tastes great, is it worth the effort? Do we want to make it again (and again and again)?<br>
         This is what we strive for - recipes you can rely on to work every time and be worth your time, effort, and $$ to make!<br><br>
-        Do you have a recipe binder or a box of recipe cards? Think of this site as us sharing our recipe box with you. Our recipes are all tested in our own kitchens, usually several times. On our calendar page <a href="calendar.html">(click here!)</a> you will find clickable images of the month's dishes. Please try the recipes and if you have a question or constructive feedback, let us know about it in the comments to the recipe.</p>     
+        Do you have a recipe binder or a box of recipe cards? Think of this site as us sharing our recipe box with you. Our recipes are all tested in our own kitchens, usually several times. On our calendar page <a href="calendar.php">(click here!)</a> you will find clickable images of the month's dishes. Please try the recipes and if you have a question or constructive feedback, let us know about it in the comments to the recipe.</p>     
     </div>
 </body>
 </html>

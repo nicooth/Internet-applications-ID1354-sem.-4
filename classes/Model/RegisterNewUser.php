@@ -20,9 +20,6 @@ class RegisterNewUser {
         
         if(($unameValidator && pswValidator) === TRUE) {
             $this->DBhandler->insertNewUser($uname, $psw);
-            //$handle = fopen("classes/Database/users.txt", "a");
-            //fwrite($handle,"\n".$uname.','.$psw);
-            //fclose($handle); 
         }
     }  
 }

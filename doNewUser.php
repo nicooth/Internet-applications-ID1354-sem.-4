@@ -10,7 +10,6 @@ use classes\Controller\Controller;
 if (count($_POST) && !empty($_POST['uname']) && !empty($_POST['psw']))
 {
     $uname = htmlentities($_POST['uname'], ENT_QUOTES);
-    //$password = $_POST['psw'];
     
     $password = htmlentities($_POST['psw'], ENT_QUOTES);
     $contr = Controller::createController();
@@ -19,6 +18,3 @@ if (count($_POST) && !empty($_POST['uname']) && !empty($_POST['psw']))
 }
 
 include 'resources/views/newUser.php';
-
-//htmlentities($_POST['uname'], ENT_QUOTES);
-//htmlentities($_POST['uname'], ENT_QUOTES);

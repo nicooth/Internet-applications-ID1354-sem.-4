@@ -1,5 +1,4 @@
 <?php include 'doNavigationBar.php';?>
-
 <!DOCTYPE html>
 <html lang = "en">
 <head>
@@ -27,9 +26,6 @@
         <hr>
         <div id = "commentbox">
             <?php
-                //include 'doDeleteCommentMB.php';
-                //include 'doAddComment.php';
-                //include 'resources/fragments/commentSectionMB.php';
                 $commentData = $contr->getCommentdata('pancakes');
                 $accessData = $contr->getAccessData('pancakes'); 
                 $name = $contr->getNickname();

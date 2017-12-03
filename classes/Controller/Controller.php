@@ -8,8 +8,6 @@ use classes\Model\AddPancakeComment;
 use classes\Model\CommentManager;
 use classes\Model\CommentManagerPC;
 
-
-
 class Controller {
     private $nickName;
     
@@ -50,30 +48,10 @@ class Controller {
         $handleComment->addComment($name, $comment, $containerType);
     }
     
-    //public function addCommentPC($uname, $comment) {
-    //    $handleComment = new CommentManagerPC();
-    //    $handleComment->addPancakeComment($uname, $comment);
-    //}
-    
     public function deleteComment($timestamp, $container) {
         $deleteComment = new CommentManager();
         $deleteComment->deleteComment($timestamp, $container);
     }
-    
-    //public function deleteCommentPC($timestamp) {
-    //    $deleteComment = new CommentManagerPC();
-    //    $deleteComment->deletePancakeComment($timestamp);
-    //}
-    
-    //public function showMBComments ($name, $container) {
-    //    $showComment = new CommentManagerMB();
-    //    $showComment->showComments($name, $container);
-    //}
-    
-    //public function showPCComments ($name) {
-    //    $showComment = new CommentManagerPC();
-    //    $showComment->showComments($name);
-    //}
     
     public function getAccessData($container) {
         $access = new CommentManager();
