@@ -11,10 +11,10 @@ if($_POST && !empty($_POST['comment'])){
 }
 
 $nextView = $_POST['containerType'];
-if ($nextView === meatball)
-    include 'resources/views/meatballs.php';
+//if ($nextView === meatball)
+//    include 'resources/views/meatballs.php';
 
-if ($nextView === pancake)
-    include 'resources/views/pancakes.php';
+//if ($nextView === pancake)
+//    include 'resources/views/pancakes.php';
 
 

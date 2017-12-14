@@ -7,6 +7,8 @@
     <link href="resources/css/style.css" rel="stylesheet" type="text/css"> 
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="resources/js/test.js"></script>
 </head>
 <body>   
     
@@ -24,34 +26,11 @@
         ?>
         <h4>What others are saying...</h4>
         <hr>
+        <button id ="loadcommentsPC" class="loadComments">Update entries</button>
         <div id = "commentbox">
-            <?php
-                $commentData = $contr->getCommentdata('pancakes');
-                $accessData = $contr->getAccessData('pancakes'); 
-                $name = $contr->getNickname();
-                $j = 0;
-                foreach ($commentData as $line) {
-                    $text = explode(',', $line, 2)[1];
-                    if(strpos($text, $name) !== false) {
-                    echo $line;
-                    $timestamp = $accessData[$j];
-                    $j++;
-                    echo '
-                        <div id = "comments">
-                            <form method = "POST" action="doDeleteComment.php">
-                                <input type="submit" value="Delete comment" name = "Delete">
-                                <input type="hidden" value="'.$timestamp.'" name="timestamp">
-                                <input type="hidden" value = "pancake" name = "containerType">
-                            </form>
-                        </div>';
-                    }
-
-                    else {
-                        echo $line;
-                    }
-                }
-            ?>
-        </div>   
+            <p hidden id="nickNameLabelPC"><?php echo $contr->getNickname();?></p>
+            <div id="newCommentboxPC"></div>
+        </div>  
     </div>
 </body>
 </html>

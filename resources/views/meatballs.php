@@ -7,9 +7,10 @@
     <link href="resources/css/style.css" rel="stylesheet" type="text/css"> 
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="resources/js/test.js"></script>
 </head>
-<body>  
-    
+<body>
     <h1>Meatballs</h1> 
     <div class="transbox">
         <img src="resources/images/meatballs.jpg" alt="Meatballs">
@@ -28,38 +29,16 @@
         2 In large bowl, mix all ingredients. Shape mixture into 20 to 24 (1 1/2-inch)<br>
         meatballs. Place 1 inch apart in pan.<br>
         3 Bake uncovered 18 to 22 minutes or until no longer pink in center.</p>
+            
         <?php
             include 'doCommentHeaderMB.php';
         ?>
         <h4>What others are saying...</h4>
         <hr>
+        <button id ="loadcommentsMB" class="loadComments">Update entries</button>
         <div id = "commentbox">
-            <?php
-                $commentData = $contr->getCommentdata('meatballs');
-                $accessData = $contr->getAccessData('meatballs'); 
-                $name = $contr->getNickname();
-                $j = 0;
-                foreach ($commentData as $line) {
-                    $text = explode(',', $line, 2)[1];
-                    if(strpos($text, $name) !== false) {
-                    echo $line;
-                    $timestamp = $accessData[$j];
-                    $j++;
-                    echo '
-                        <div id = "comments">
-                            <form method = "POST" action="doDeleteComment.php">
-                                <input type="submit" value="Delete comment" name = "Delete">
-                                <input type="hidden" value="'.$timestamp.'" name="timestamp">
-                                <input type="hidden" value = "meatball" name = "containerType">
-                            </form>
-                        </div>';
-                    }
-
-                    else {
-                        echo $line;
-                    }
-                }
-            ?>   
+            <p hidden id="nickNameLabel"><?php echo $contr->getNickname();?></p>
+            <div id="newCommentbox"></div>
         </div>
     </div>
 </body>
