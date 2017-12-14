@@ -1,5 +1,5 @@
-$(document).ready(function () {
-    $("button#submit").click(function () {
+$(document).ready(function() {
+    $("button#submit").click(function() {
         alert("Your comment has been posted!");
         $.post("doAddComment.php", $("#operands").serialize());
     });
@@ -45,7 +45,7 @@ $(document).ready(function () {
         $("#newCommentboxPC").html("");
         $.get("classes/Database/containerPancakes.html", function(my_var) {
         var n = my_var.split("\n");
-        //var HTMLcode = "";
+        var HTMLcode = "";
         var tp = new Array();
         
         for (var k = 0; k < n.length; k++){
