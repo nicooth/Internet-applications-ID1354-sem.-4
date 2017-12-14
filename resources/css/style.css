@@ -767,6 +767,21 @@ button {
     width: 100%;
 }
 
+#loadCommentsMB{
+   width: 90%;
+   margin-left: 5%;
+}
+
+#loadCommentsPC{
+   width: 90%;
+   margin-left: 5%;
+}
+
+#delBut{
+    width: 15%;
+    background-color: #CD5C5C;
+}
+
 /* Add a hover effect for buttons */
 button:hover {
     opacity: 0.8;

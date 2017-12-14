@@ -29,7 +29,7 @@ $(document).ready(function() {
             $("<input type=\"hidden\" value = \"meatball\" name = \"containerType\">").appendTo(deleteComment);
             $("<input type='hidden' name='timestamp' value='" +
                             tp[i] + "'/></form>").appendTo(deleteComment);
-            $("<button>Delete</button>").click(deleteButtonHandler).appendTo(deleteComment);
+            $("<button id=\"delBut\">Delete</button>").click(deleteButtonHandler).appendTo(deleteComment);
             $(deleteComment).appendTo("#newCommentbox");
             
             }
@@ -61,7 +61,7 @@ $(document).ready(function() {
             $("<input type=\"hidden\" value = \"pancake\" name = \"containerType\">").appendTo(deleteComment);
             $("<input type='hidden' name='timestamp' value='" +
                             tp[i] + "'/></form>").appendTo(deleteComment);
-            $("<button>Delete</button>").click(deleteButtonHandler).appendTo(deleteComment);
+            $("<button id=\"delBut\">Delete</button>").click(deleteButtonHandler).appendTo(deleteComment);
             $(deleteComment).appendTo("#newCommentboxPC");
             
             }
